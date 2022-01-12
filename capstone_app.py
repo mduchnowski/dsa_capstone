@@ -31,9 +31,19 @@ def load_data():
     
     return df, states, state_fips_dict
 
+@st.cache(ttl=3600)
+def load_dictionary():
+    state_fips = pd.read_csv('data/state_fips.csv')
+    state_fips_dict = dict(zip(state_fips.state, state_fips.fips))
+    return state_fips_dict
 
+# --- Load data -----
+#state_fips_dict = load_dictionary()
+df, states, state_fips_dict = load_data()
 
-st.title("Welcome to COVID-19 Data Insight")
+state_fips_dict = load_dictionary()
+
+st.title("Welcome to Matt's Capstone Project")
 
 st.markdown("---")
 st.markdown("## Dynamics matters")
