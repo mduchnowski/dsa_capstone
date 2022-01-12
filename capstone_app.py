@@ -18,32 +18,22 @@ pio.templates.default="ggplot2"
 
 today = datetime.date.today()
 
-@st.cache(ttl=3600)
+
 def load_data():
     df = pd.read_csv("data\data_capstone_dsa2021_2022.csv")
     df['cohort'] = pd.qcut(df['sum_score'], 3, labels=['Low', 'Mid', 'High'])
 
-    states = df.state.unique().tolist()
-    states.sort()
+    #states = df.state.unique().tolist()
+    #states.sort()
 
-    state_fips = pd.read_csv('data/state_fips.csv')
-    state_fips_dict = dict(zip(state_fips.state, state_fips.fips))
+    #state_fips = pd.read_csv('data/state_fips.csv')
+    #state_fips_dict = dict(zip(state_fips.state, state_fips.fips))
     
-    return df, states, state_fips_dict
+    return df
 
-@st.cache(ttl=3600)
-def load_dictionary():
-    state_fips = pd.read_csv('data/state_fips.csv')
-    state_fips_dict = dict(zip(state_fips.state, state_fips.fips))
-    return state_fips_dict
+df = load_data()
 
-# --- Load data -----
-#state_fips_dict = load_dictionary()
-df, states, state_fips_dict = load_data()
-
-state_fips_dict = load_dictionary()
-
-st.title("Welcome to Matt's Capstone Project")
+st.title("Welcome to Matt's Data Science Project")
 
 st.markdown("---")
 st.markdown("## Dynamics matters")
