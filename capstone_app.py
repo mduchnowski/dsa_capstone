@@ -20,7 +20,7 @@ today = datetime.date.today()
 
 
 def load_data():
-    df = pd.read_csv("data\data_capstone_dsa2021_2022.csv")
+    df = pd.read_csv("data/data_capstone_dsa2021_2022.csv")
     df['cohort'] = pd.qcut(df['sum_score'], 3, labels=['Low', 'Mid', 'High'])
 
     #states = df.state.unique().tolist()
