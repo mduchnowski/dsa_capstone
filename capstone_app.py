@@ -47,4 +47,6 @@ st.markdown("---")
 
 st.markdown("## Plot of item timing by performace")
 
-px.scatter(df, x="rt_gs_2", y="gs_2", size="sum_score", color="cohort", hover_name="age", log_x=True, size_max=60)
+TimePlot = px.scatter(df, x="rt_gs_2", y="gs_2", size="sum_score", color="cohort", hover_name="age", log_x=True, size_max=60)
+
+st.plotly_chart(TimePlot)
