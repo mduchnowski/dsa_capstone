@@ -569,7 +569,7 @@ def makePacingPlot():
     frame_list.append([0, 1, 0, "Student B"])
 
     #The total number of frames the animation will contain
-    FrameTotal = int(round(max(stuA['rt_total'].values[0],stuB['rt_total'].values[0])/FrameRate, -2))+1
+    FrameTotal = int(round((max(stuA['rt_total'].values[0],stuB['rt_total'].values[0])/FrameRate)+50, -2))+1
 
     #Student A 
     for Frame in range(1,FrameTotal):
