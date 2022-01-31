@@ -233,7 +233,7 @@ st.markdown("---")
 st.markdown("## Data Preparation")
 st.markdown("To prepare the data for these analyses, the following variables were derived.")
 
-st.text("sum_score  : sum of item scores \nsum_cohort : classification of students according to their sum_score; Low, Mid, High cutoffs are drawn using top, middle and bottow thirds (quantiles)  \n\nzip_score  : Sum of item zip scores. \nzip_cohort : classification of students according to their zip scrore; Low, Mid, High cutoffs are drawn using top, middle and bottow thirds (quantiles)\n\nabbrev     : Formulation of US state abbreviations using student input. When a response can not be determined, it is left blank\n")
+st.text("sum_score  : sum of item scores \nsum_cohort : classification of students according to their sum_score; Low, Mid, High cutoffs are drawn using top, middle and bottow thirds (quantiles)  \n\nzip_score  : sum of item zip scores \nzip_cohort : classification of students according to their zip scrore; Low, Mid, High cutoffs are drawn using top, middle and bottow thirds (quantiles)\n\nabbrev     : Formulation of US state abbreviations using student input. When a response can not be determined, it is left blank\n")
 
 #########################################################
 # Effects on Score Distribution
@@ -545,7 +545,7 @@ col5.markdown("<h5 style='text-align: center;'>" + "Mean Absolute Error : " + bR
 #########################################################
 st.markdown("---")
 st.markdown("## Zip Score as Fingerprint")
-st.markdown("A student's _zip score_ contains information about their pacing and might be used to detect pairs or groups of students with suspiciously improbably similarities in item timing. This illustration depicts the pacing of two students with identical response patterns and equivalent _zip scores_.")
+st.markdown("A student's _zip score_ contains information about their pacing and might be used to detect pairs or groups of students with suspiciously improbable similarities in item timing. This illustration depicts the pacing of two students with identical response patterns and equivalent _zip scores_.")
 
 colF1, colF2 = st.columns((2,8))
 
