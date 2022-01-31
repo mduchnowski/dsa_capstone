@@ -15,7 +15,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import plotly.io as pio
 import plotly.figure_factory as ff
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
@@ -136,7 +136,7 @@ dfPairs = getSuspectPairs(df)
 
 #Layout for Modeling Scatter-Plot 
 lytScatter = go.Layout(
-    xaxis=go.XAxis(
+    xaxis=go.layout.XAxis(
        range=[0, 21],
        showgrid=True,
        zeroline=True,
@@ -148,7 +148,7 @@ lytScatter = go.Layout(
        linecolor='#636363',
        linewidth=1
     ),
-    yaxis=go.YAxis(
+    yaxis=go.layout.YAxis(
         range=[0,21],
         showgrid=True,
         zeroline=True,
