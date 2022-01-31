@@ -521,7 +521,7 @@ col3.plotly_chart(figA, use_container_width=True)
 
 #Model A performance metric
 aRMSE = '{0:.2f}'.format(np.sqrt(metrics.mean_squared_error(ya_test, ya_pred)))
-col3.markdown("<h5 style='text-align: center;'>" + "Mean Absolute Error : " + aRMSE + "</h5>", unsafe_allow_html=True)
+col3.markdown("<h5 style='text-align: center;'>" + "Root-Mean-Square Error : " + aRMSE + "</h5>", unsafe_allow_html=True)
 
 #Build Model B
 regB = linear_model.LinearRegression()
@@ -538,7 +538,7 @@ col5.plotly_chart(figB, use_container_width=True)
 
 #Model B performance metric
 bRMSE = '{0:.2f}'.format(np.sqrt(metrics.mean_squared_error(yb_test, yb_pred)))
-col5.markdown("<h5 style='text-align: center;'>" + "Mean Absolute Error : " + bRMSE + "</h5>", unsafe_allow_html=True)
+col5.markdown("<h5 style='text-align: center;'>" + "Root-Mean-Square Error : " + bRMSE + "</h5>", unsafe_allow_html=True)
 
 #########################################################
 # Zip Score as Fingerprint
